@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/sxxzq/ontologies/2020/7/situational-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/sxxzq/ontologies/2020/7/situational-ontology">
+    <Prefix name="" IRI="http://www.semanticweb.org/sxxzq/ontologies/2020/7/untitled-ontology-14"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#metadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#predictModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#situation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPredict"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSituation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSource"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#metadataInfo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#metadataPredicInfo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#metadataSensorName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#metadataTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#predictModelFile"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#predictModelType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#situationContent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#situationName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#situationOperation"/>
+    </Declaration>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSituation"/>
+        <ObjectProperty IRI="#hasSource"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPredict"/>
+        <Class IRI="#metadata"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSituation"/>
+        <Class IRI="#metadata"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSource"/>
+        <Class IRI="#situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPredict"/>
+        <Class IRI="#predictModel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSituation"/>
+        <Class IRI="#situation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSource"/>
+        <Class IRI="#metadata"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#metadataInfo"/>
+        <Class IRI="#metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#metadataPredicInfo"/>
+        <Class IRI="#metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#metadataSensorName"/>
+        <Class IRI="#metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#metadataTime"/>
+        <Class IRI="#metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#predictModelFile"/>
+        <Class IRI="#predictModel"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#predictModelType"/>
+        <Class IRI="#predictModel"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#situationContent"/>
+        <Class IRI="#situation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#situationName"/>
+        <Class IRI="#situation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#situationOperation"/>
+        <Class IRI="#situation"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#metadataInfo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#metadataPredicInfo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#metadataSensorName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#metadataTime"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#predictModelFile"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#predictModelType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#situationContent"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#situationName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#situationOperation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

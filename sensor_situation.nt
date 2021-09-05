@@ -1,0 +1,53 @@
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#metadata/1> <http://www.sensor-situation.com#hasPredict> <file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#predict_model/1> .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#metadata/2> <http://www.sensor-situation.com#hasPredict> <file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#predict_model/2> .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#metadata/1> <http://www.sensor-situation.com#hasSituation> <file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#situation/1> .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#metadata/2> <http://www.sensor-situation.com#hasSituation> <file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#situation/2> .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#metadata/1> <http://www.sensor-situation.com#metadataInfo> "{data:350}" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#metadata/1> <http://www.sensor-situation.com#metadateTime> "2020-09-10 17:58:01" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#metadata/1> <http://www.sensor-situation.com#metadataInfo> "{data:350, predict: 700}" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#metadata/1> <http://www.sensor-situation.com#metadataSensorName> "光敏传感器" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#metadata/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.sensor-situation.com#metadata> .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#metadata/2> <http://www.sensor-situation.com#metadataInfo> "{data:150}" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#metadata/2> <http://www.sensor-situation.com#metadateTime> "2020-09-10 18:00:04" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#metadata/2> <http://www.sensor-situation.com#metadataInfo> "{data:150, predict: 25}" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#metadata/2> <http://www.sensor-situation.com#metadataSensorName> "温度传感器" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#metadata/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.sensor-situation.com#metadata> .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#predict_model/1> <http://www.sensor-situation.com#predictModelFile> "./dim.model" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#predict_model/1> <http://www.sensor-situation.com#predictModelType> "dim" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#predict_model/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.sensor-situation.com#predictModel> .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#predict_model/2> <http://www.sensor-situation.com#predictModelFile> "./has_fire.model" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#predict_model/2> <http://www.sensor-situation.com#predictModelType> "has_fire" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#predict_model/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.sensor-situation.com#predictModel> .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#situation/1> <http://www.sensor-situation.com#situationOperation> "dim_action" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#situation/1> <http://www.sensor-situation.com#situationContent> "\u706f\u5149\u592a\u6697\u4e86" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#situation/1> <http://www.sensor-situation.com#situationName> "\u5149\u7ebf\u660f\u6697" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#situation/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.sensor-situation.com#situation> .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#situation/2> <http://www.sensor-situation.com#situationOperation> "has_fire_action" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#situation/2> <http://www.sensor-situation.com#situationContent> "\u6709\u706B\u707E\u53D1\u751F" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#situation/2> <http://www.sensor-situation.com#situationName> "\u706B\u707E\u53D1\u751F" .
+<file:///C:/ECNU/kg/d2rq-0.8.1/sensor_situation.nt#situation/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.sensor-situation.com#situation> .
+<http://www.sensor-situation.com#metadataSensorName> <http://www.w3.org/2000/01/rdf-schema#label> "metadata metadata_sensor_name" .
+<http://www.sensor-situation.com#metadataSensorName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.sensor-situation.com#situationName> <http://www.w3.org/2000/01/rdf-schema#label> "situation situation_name" .
+<http://www.sensor-situation.com#situationName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.sensor-situation.com#predictModel> <http://www.w3.org/2000/01/rdf-schema#label> "predict_model" .
+<http://www.sensor-situation.com#predictModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.sensor-situation.com#hasPredict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.sensor-situation.com#metadateTime> <http://www.w3.org/2000/01/rdf-schema#label> "metadata metadata_time" .
+<http://www.sensor-situation.com#metadateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.sensor-situation.com#situationContent> <http://www.w3.org/2000/01/rdf-schema#label> "situation situation_content" .
+<http://www.sensor-situation.com#situationContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.sensor-situation.com#predictModelFile> <http://www.w3.org/2000/01/rdf-schema#label> "predict_model predict_model_file" .
+<http://www.sensor-situation.com#predictModelFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.sensor-situation.com#situation> <http://www.w3.org/2000/01/rdf-schema#label> "situation" .
+<http://www.sensor-situation.com#situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.sensor-situation.com#hasSituation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.sensor-situation.com#predictModelType> <http://www.w3.org/2000/01/rdf-schema#label> "predict_model predict_model_type" .
+<http://www.sensor-situation.com#predictModelType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.sensor-situation.com#metadata> <http://www.w3.org/2000/01/rdf-schema#label> "metadata" .
+<http://www.sensor-situation.com#metadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.sensor-situation.com#metadataInfo> <http://www.w3.org/2000/01/rdf-schema#label> "metadata metadata_predic_info" .
+<http://www.sensor-situation.com#metadataInfo> <http://www.w3.org/2000/01/rdf-schema#label> "metadata metadata_info" .
+<http://www.sensor-situation.com#metadataInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.sensor-situation.com#situationOperation> <http://www.w3.org/2000/01/rdf-schema#label> "situation situation_operation" .
+<http://www.sensor-situation.com#situationOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .

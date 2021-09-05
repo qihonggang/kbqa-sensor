@@ -1,0 +1,45 @@
+@prefix fuseki:  <http://jena.apache.org/fuseki#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tdb:     <http://jena.hpl.hp.com/2008/tdb#> .
+@prefix ja:      <http://jena.hpl.hp.com/2005/11/Assembler#> .
+@prefix :        <#> .
+
+<#service1> rdf:type fuseki:Service ;
+    fuseki:name                       "sensor-situation" ;       # http://host:port/sensor-situation
+    fuseki:serviceQuery               "sparql" ;   # SPARQL query service
+    fuseki:serviceQuery               "query" ;    # SPARQL query service (alt name)
+    fuseki:serviceUpdate              "update" ;   # SPARQL update service
+    fuseki:serviceUpload              "upload" ;   # Non-SPARQL upload service
+    fuseki:serviceReadWriteGraphStore "data" ;     # SPARQL Graph store protocol (read and write)
+    # A separate read-only graph store endpoint:
+    fuseki:serviceReadGraphStore      "get" ;      # SPARQL Graph store protocol (read only)
+    fuseki:dataset                   <#dataset> ;
+    .
+
+<#dataset> rdf:type ja:RDFDataset ;
+    ja:defaultGraph <#model_inf> ;
+    .
+
+<#model_inf> a ja:InfModel ;
+    ja:baseModel <#tdbGraph> ;
+
+    #本体文件的路径
+    ja:content [ja:externalContent <file:situational-ontology.ttl> ] ;
+    
+    #启用OWL推理机
+    ja:reasoner [ja:reasonerURL <http://jena.hpl.hp.com/2003/OWLFBRuleReasoner>] .
+    
+    #开启规则推理机，并指定规则文件路径
+    #ja:reasoner [
+    #    ja:reasonerURL <http://jena.hpl.hp.com/2003/GenericRuleReasoner> ;
+    #    ja:rulesFrom <file:rules.ttl> ; ]
+    #.
+
+<#dataset> rdf:type      tdb:DatasetTDB ;
+    tdb:location "C:/ECNU/kg/jena/tdb" ;
+    # Query timeout on this dataset (1s, 1000 milliseconds)
+    ja:context [ ja:cxtName "arq:queryTimeout" ;  ja:cxtValue "1000" ] ;
+    # Make the default graph be the union of all named graphs.
+    ## tdb:unionDefaultGraph true ;
+     .

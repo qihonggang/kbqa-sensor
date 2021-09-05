@@ -1,0 +1,109 @@
+@prefix map: <#> .
+@prefix db: <> .
+@prefix vocab: <vocab/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix jdbc: <http://d2rq.org/terms/jdbc/> .
+@prefix : <http://www.sensor-situation.com#> .
+
+map:database a d2rq:Database;
+	d2rq:jdbcDriver "com.mysql.cj.jdbc.Driver";
+	d2rq:jdbcDSN "jdbc:mysql:///sensor_situation?serverTimezone=UTC";
+	d2rq:username "root";
+	d2rq:password "root";
+	jdbc:autoReconnect "true";
+	jdbc:zeroDateTimeBehavior "convertToNull";
+	.
+
+# Table metadata
+map:metadata a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "metadata/@@metadata.id@@";
+	d2rq:class :metadata;
+	d2rq:classDefinitionLabel "metadata";
+	.
+map:metadata_metadata_info a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:metadata;
+	d2rq:property :metadataInfo;
+	d2rq:propertyDefinitionLabel "metadata metadata_info";
+	d2rq:column "metadata.metadata_info";
+	.
+map:metadata_metadata_time a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:metadata;
+	d2rq:property :metadateTime;
+	d2rq:propertyDefinitionLabel "metadata metadata_time";
+	d2rq:column "metadata.metadata_time";
+	.
+map:metadata_metadata_predic_info a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:metadata;
+	d2rq:property :metadataInfo;
+	d2rq:propertyDefinitionLabel "metadata metadata_predic_info";
+	d2rq:column "metadata.metadata_predic_info";
+	.
+map:metadata_metadata_sensor_name a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:metadata;
+	d2rq:property :metadataSensorName;
+	d2rq:propertyDefinitionLabel "metadata metadata_sensor_name";
+	d2rq:column "metadata.metadata_sensor_name";
+	.
+# Table predict_model
+map:predict_model a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "predict_model/@@predict_model.id@@";
+	d2rq:class :predictModel;
+	d2rq:classDefinitionLabel "predict_model";
+	.
+map:predict_model_predict_model_type a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:predict_model;
+	d2rq:property :predictModelType;
+	d2rq:propertyDefinitionLabel "predict_model predict_model_type";
+	d2rq:column "predict_model.predict_model_type";
+	.
+map:predict_model_predict_model_file a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:predict_model;
+	d2rq:property :predictModelFile;
+	d2rq:propertyDefinitionLabel "predict_model predict_model_file";
+	d2rq:column "predict_model.predict_model_file";
+	.
+# Table metadata_to_predict_model (n:m)
+map:metadata_to_predict_model__link a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:metadata;
+	d2rq:property :hasPredict;
+	d2rq:refersToClassMap map:predict_model;
+	d2rq:join "metadata_to_predict_model.metadata_id => metadata.id";
+	d2rq:join "metadata_to_predict_model.predict_model_id => predict_model.id";
+	.
+# Table situation
+map:situation a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "situation/@@situation.id@@";
+	d2rq:class :situation;
+	d2rq:classDefinitionLabel "situation";
+	.
+map:situation_situation_name a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:situation;
+	d2rq:property :situationName;
+	d2rq:propertyDefinitionLabel "situation situation_name";
+	d2rq:column "situation.situation_name";
+	.
+map:situation_situation_content a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:situation;
+	d2rq:property :situationContent;
+	d2rq:propertyDefinitionLabel "situation situation_content";
+	d2rq:column "situation.situation_content";
+	.
+map:situation_situation_operation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:situation;
+	d2rq:property :situationOperation;
+	d2rq:propertyDefinitionLabel "situation situation_operation";
+	d2rq:column "situation.situation_operation";
+	.
+# Table metadata_to_situation (n:m)
+map:metadata_to_situation__link a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:metadata;
+	d2rq:property :hasSituation;
+	d2rq:refersToClassMap map:situation;
+	d2rq:join "metadata_to_situation.metadata_id => metadata.id";
+	d2rq:join "metadata_to_situation.situation_id => situation.id";
